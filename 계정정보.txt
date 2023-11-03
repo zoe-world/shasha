@@ -8,3 +8,5 @@ https://smartstore.naver.com/shashaddalgi
 비번:hanerl1964!
 
 도메인주소 : http://www.shashaddalgi.com/
+
+개발주소: https://zoe-world.github.io/shasha/source/main.html
