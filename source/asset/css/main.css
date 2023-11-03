@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* 메인비주얼 */
+
+.slide_tool {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.slide_tool>*:not(:first-child) {
+    margin-left: 10px;
+}
+
+.slide_tool .swiper-pagination {
+    position: static;
+}
+
+.slide_tool .swiper-pagination .swiper-pagination-bullet {
+    position: relative;
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    transition: width 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.slide_tool .swiper-pagination .swiper-pagination-bullet-active {
+    width: 30px;
+    background-color: #2c91f4;
+    border-radius: 30px;
+}
+
+.slide_tool .swiper-pagination .swiper-pagination-bullet~.swiper-pagination-bullet {
+    margin-left: 8px;
+}
+
+.slide_tool [class*="swiper-button"] {
+    position: relative;
+    right: auto;
+    left: auto;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3px;
+    width: 12px;
+    height: 20px;
+}
+
+.slide_tool .swiper-button-next:after,
+.swiper-button-prev:after {
+    color: #000;
+    font-size: 2.1rem;
+    font-weight: bold;
+    display: none;
+}
+
+.slide_tool .swiper-button-prev {
+    background: url("../img/main/icon_slider-btn.png") no-repeat -10px -5px;
+    background-size: 165px;
+}
+
+.slide_tool .swiper-button-next {
+    background: url("../img/main/icon_slider-btn.png") no-repeat -140px -5px;
+    background-size: 165px;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    opacity: 1;
+}
+
+.play_pause {}
+
+.play_pause button {}
+
+.play_pause .swiper-button-pause:before,
+.play_pause .swiper-button-pause:after {
+    position: absolute;
+    top: 4px;
+    display: block;
+    content: "";
+    background-color: #fff;
+    width: 2px;
+    height: 15px;
+}
+
+.play_pause .swiper-button-pause::before {
+    left: 2px;
+}
+
+.play_pause .swiper-button-pause::after {
+    right: 2px;
+}
+
+.play_pause .swiper-button-play {
+    display: none;
+}
+
+.play_pause .swiper-button-play:after {
+    position: absolute;
+    top: 3px;
+    left: -4px;
+    transform: rotate(-135deg);
+    display: block;
+    content: "";
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid #fff;
+    border-top: 6px solid transparent;
+    border-left: 6px solid #fff;
+    border-right: 6px solid transparent;
+}
+
+/************ 
+컨텐츠
+************/
+.container [class*="_wrap"] {
+    height: 100vh;
+}
+
+.container [class*="_wrap"] .tit {
+    font-family: "Poppins";
+    font-size: 6.8rem;
+    text-align: center;
+}
+
+.intro_wrap {
+    position: relative;
+    background: url(../images/bg.jpg);
+}
+
+.intro_box {
+    position: relative;
+    height: 100%;
+}
+
+.intro_box::before,
+.intro_box::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    content: "";
+    background-image: url(../images/ddalgi_l.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -1vw;
+    width: min(17vw, 350px);
+    aspect-ratio: 1/1.2;
+}
+
+.intro_box::before {
+    left: 33vw;
+}
+
+.intro_box::after {
+    right: 33vw;
+    background-image: url(../images/ddalgi_r.png);
+}
+
+.intro_box .tit {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro_wrap .btn {
+    position: absolute;
+    left: 50%;
+    bottom: 7vw;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 5rem;
+    background-color: #004aad;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.intro_wrap .btn span {
+    position: relative;
+    color: #004aad;
+    transition: 0.2s 0.1s;
+}
+
+.intro_wrap .btn:hover span{
+    color: #fff;
+    transition: 0.2s 0.1s;
+}
+
+.intro_wrap .btn::before {
+    background-color: #fff;
+    transition: 0.3s ease-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+}
+
+.intro_wrap .btn:hover::before {
+    height: 0%;
+}
