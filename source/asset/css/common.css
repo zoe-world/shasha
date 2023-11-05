@@ -334,7 +334,7 @@ body.active { overflow:hidden}
 
 #wrap { position:relative; min-width:320px; overflow:hidden; } 
 .inner { width:1280px; margin:0 auto; } 
-.container { position:relative; overflow:hidden; width:100%; margin:0 auto; min-height: 100vh;padding-bottom: 60px;} 
+.container { position:relative; overflow:hidden; width:100%; margin:0 auto; min-height: 100vh;} 
 
 
 #skip_nav a { z-index:100000; position:fixed; top:0; left:0; width:1px; height:1px; margin-left:-1px; font-size:0; line-height:0; overflow:hidden; } 
@@ -355,27 +355,19 @@ intro_box.gnb { position: relative;width: 1500px;margin: 0 auto;padding: 20px;}
 .header.show:after {background-color: #dee7f5;top: 110px;}
 .header.show .gnb-inner h1 > a {}
 
-.header.floating { background-color: #fff;}
-.header.floating::before {background-color: #f3f6fb;}
+.header.floating { background-color: transparent;}
+.header.floating .gnb-inner h1 > a {height: max(15vh, 85px);}
+.header.floating::before {background-color: #fff;}
 .header.floating:after {background-color: #dee7f5;top: 110px;}
 .header.floating .gnb-inner h1 > a {}
 
 /* footer */
-#footer {width: 100%;height: 120px;}
-#footer::before {position: absolute;z-index: -1;display: inline-block;content: "";width: 100%;height: 140px;background-color: #444754;}
-.footer-inner {display: flex;align-items: flex-start;justify-content: space-between;padding: 30px 0;max-width: 1500px;height: 100%;margin: 0 auto;color: #fff;}
-.footer-inner .f-left {flex: 1 0 auto;}
-.footer-inner .f-left h2 {font-size: 1.8rem;letter-spacing: -0.07em;}
-.footer-inner .f-left h2 > span {display: block;font-size: 1.3rem;}
-.footer-inner .f-right {}
-.footer-inner .f-right {font-size: 1.5rem;font-weight: 300;}
-.footer-inner .f-right::before,
-.footer-inner .f-right::after {display: block;content: "";clear: both;}
-.footer-inner .f-right .footer-info {display: flex;}
-.footer-inner .f-right address {font-weight: 300}
-.footer-inner .f-right .copy {text-align: right;}
-.footer-inner .link {padding-left: 105px;}
-.footer-inner .link .item {color: #f2f758;text-decoration: underline;font-weight: 500;}
+#footer {width: 100%;height: max(17vw,20rem);}
+#footer::before {position: absolute;z-index: -1;display: inline-block;content: "";width: 100%;height: 100%;background-color: #004AAD;}
+.footer-inner {padding: 5vw 3rem;max-width: 1500px;height: 100%;margin: 0 auto;color: #fff;}
+.footer-inner .tit{font-size: min(5vw, 3.6rem);}
+.footer-inner > *:not(.tit){margin-top: 0.5vw;font-size: min(3vw, 2rem);}
+
 
 @media screen and (max-width:1499px){
     .gnb {width: 100%;}
@@ -391,21 +383,10 @@ intro_box.gnb { position: relative;width: 1500px;margin: 0 auto;padding: 20px;}
     .header.show::before {background-color: #fff;}
     .header.show:after {top: 90px;}
     
-    #footer {height: 120px;}
-    #footer::before {height: 120px;}
-    .footer-inner {padding: 20px 20px;justify-content: space-between;}
-    .footer-inner .f-left {flex: initial;}
-    .footer-inner .f-right {padding-left: 0;}
-    .footer-inner .f-right .copy {text-align: left;}
-    .footer-inner .link {padding-left: 25px;}
+    
 }
 @media screen and (max-width:1024px){
-    #footer {height: auto;}
-    #footer::before {height: 100%;}
-    .footer-inner {flex-direction: column;align-items: center;justify-content: center;text-align: center;}
-    .footer-inner .f-left h2 {}
-    .footer-inner .f-right {padding-top: 15px;}
-    .footer-inner .f-right .copy {text-align: center;}
+  
 }
 @media screen and (max-width:767px){
     html {font-size: 50%;}
@@ -413,11 +394,7 @@ intro_box.gnb { position: relative;width: 1500px;margin: 0 auto;padding: 20px;}
     .header.floating.show{height: 70px;}
     .header.show:after {top: 70px;}
     .header.floating:after {top: 70px;}
-    .gnb-inner h1 {height: 70px;}
-    .gnb-inner h1 > a {width: 175px;height: 15px;}
-    .footer-inner {padding: 30px 20px;display: block;}
-    .footer-inner .f-right address {word-wrap: break-word;word-break: break-all;}
-    .footer-inner .link {padding-top: 10px;padding-left: 0;}
+
 }
 @media screen and (max-width:468px){
     
