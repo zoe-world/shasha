@@ -303,9 +303,14 @@
     margin-top: 4vw;
     transform:translateX(0)
 }
+@media screen and (max-width:1024px){
+    .swiper-wrapper{
+        height: auto;
+    }
+}
 @media screen and (max-width:767px){
     .container [class*="_wrap"] .tit{
-        font-size: 4rem;
+        font-size: 3.6rem;
     }
     .intro_box::before, .intro_box::after{
         width: min(25vw,250px);
@@ -336,7 +341,11 @@
     .about_box .abt_list dd{
         text-align: center;
     }
+    .event_wrap{
+        padding: min(10vw,20rem) 0;
+    }
     .event_wrap .txt_bx p{
         font-size: 1.8rem;
     }
+    
 }

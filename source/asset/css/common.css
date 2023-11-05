@@ -394,12 +394,7 @@ intro_box.gnb { position: relative;width: 1500px;margin: 0 auto;padding: 20px;}
     .header.floating.show{height: 70px;}
     .header.show:after {top: 70px;}
     .header.floating:after {top: 70px;}
-
-}
-@media screen and (max-width:468px){
-    
-}
-
-@media screen and (max-width:767px){
+    #footer{height: max(23vw,15rem);}
+    .footer-inner{padding: 5vw 3rem;}
 
 }
