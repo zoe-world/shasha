@@ -328,6 +328,9 @@
     .shop_btn{
         font-size: 2rem;
     }
+    .about_wrap{
+        padding: min(10vw,20rem) 0;
+    }
     .about_wrap .tit .stit{
         font-size: 2rem;
     }
