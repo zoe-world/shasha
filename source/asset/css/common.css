@@ -364,7 +364,7 @@ intro_box.gnb { position: relative;width: 1500px;margin: 0 auto;padding: 20px;}
 /* footer */
 #footer {width: 100%;height: max(17vw,20rem);}
 #footer::before {position: absolute;z-index: -1;display: inline-block;content: "";width: 100%;height: 100%;background-color: #004AAD;}
-.footer-inner {padding: 5vw 3rem;max-width: 1500px;height: 100%;margin: 0 auto;color: #fff;}
+.footer-inner {padding: 5vw 6rem;height: 100%;margin: 0 auto;color: #fff;}
 .footer-inner .tit{font-size: min(5vw, 3.6rem);}
 .footer-inner > *:not(.tit){margin-top: 0.5vw;font-size: min(3vw, 2rem);}
 
