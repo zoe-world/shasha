@@ -305,7 +305,11 @@
 }
 @media screen and (max-width:1024px){
     .swiper-wrapper{
+        aspect-ratio: 1/.5;
         height: auto;
+    }
+    .swiper-slide img{
+        height: 100%;
     }
 }
 @media screen and (max-width:767px){
@@ -354,7 +358,5 @@
         width: 8px;
         height: 8px;
     }
-    .swiper-slide img{
-        height: auto;
-    }
+
 }
