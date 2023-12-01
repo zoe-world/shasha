@@ -301,6 +301,7 @@
     position: relative;
     padding: min(7vw,20rem) 0;
     background:url(../images/abt_bg.png);
+    min-height: 50vh;
 }
 .event_wrap .tit{
     color: #004AAD;
